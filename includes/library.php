@@ -185,7 +185,7 @@ class WordPress_Social_Ring {
 	}
 	
 	function twitter_html() {
-		$twitter_html = '<a rel="nofollow" href="http://twitter.com/share" lang="'.$this->options['twitter_language'].'" data-url="'.$this->post_url.'" data-text="'.$this->post_title.'" ';
+		$twitter_html = '<a rel="nofollow" href="//twitter.com/share" lang="'.$this->options['twitter_language'].'" data-url="'.$this->post_url.'" data-text="'.$this->post_title.'" ';
 		if($this->options['button_counter'] == "horizontal") {
 			$twitter_html .= 'data-count="horizontal"';
 		} elseif($this->options['button_counter'] == "vertical") {
@@ -242,7 +242,7 @@ class WordPress_Social_Ring {
 	}
 	
 	function pin_it_html() {
-		$pin_it_html = '<a rel="nofollow" href="http://pinterest.com/pin/create/button/?url='.$this->post_encoded_url;
+		$pin_it_html = '<a rel="nofollow" href="//pinterest.com/pin/create/button/?url='.$this->post_encoded_url;
 		$image = $this->get_first_image();
 		if($image > '') {
 			$pin_it_html .= '&media='.urlencode($image);
@@ -333,7 +333,7 @@ class WordPress_Social_Ring {
 	function add_footer_js() {
 	?>
 		<!-- Social Ring JS Start -->
-	<div id="fb-root"></div><script src="http://connect.facebook.net/<?php echo $this->options['facebook_language']; ?>/all.js#xfbml=1"></script>
+	<div id="fb-root"></div><script src="//connect.facebook.net/<?php echo $this->options['facebook_language']; ?>/all.js#xfbml=1"></script>
 	<script type="text/javascript">
 		window.___gcfg = {
 		  lang: '<?php echo $this->options['google_language']; ?>'
@@ -345,8 +345,8 @@ class WordPress_Social_Ring {
 		})();
 	</script>
 	<script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script>
-	<script type='text/javascript' src='http://platform.twitter.com/widgets.js'></script>
-        <script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
+	<script type='text/javascript' src='//platform.twitter.com/widgets.js'></script>
+        <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 	<script type="text/javascript">
 		(function() {
 		  var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
